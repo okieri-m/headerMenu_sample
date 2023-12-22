@@ -15,7 +15,7 @@
 ); ?>
 </nav>
 
-<p class="copyright">&copy; 20XX <?php echo get_bloginfo('name');?>.</p>
+<p class="copyright">&copy; 20XX.テストテストテスト <?php echo get_bloginfo('name');?>.</p>
 </footer>
 
 
