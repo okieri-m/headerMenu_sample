@@ -195,7 +195,6 @@ header .w-nab-wrapper {
 
 .w-nav-navmenu {
   display: flex;
-  margin-left: 40px;
   flex: 1;
   justify-content: space-between;
   align-items: center;
@@ -204,7 +203,7 @@ header .w-nab-wrapper {
   .w-nav-navmenu {
     position: fixed;
     display: block;
-    top: -800px;
+    top: 80px;
     right: 0;
     width: 100%;
     height: inherit;
@@ -212,29 +211,30 @@ header .w-nab-wrapper {
     box-sizing: border-box;
     z-index: 1;
     transition: 0.9s;
+    opacity: 0;
   }
   .w-nav-navmenu.open {
-    top: 80px;
-    height: 80%;
+    opacity: 1;
   }
 }
-.w-nav-navmenu .nav-list {
+.w-nav-navmenu .nav-list-header2 {
   display: flex;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .w-nav-navmenu .nav-list {
+  .w-nav-navmenu .nav-list-header2 {
     display: block;
     background-color: #F5F8FA;
   }
 }
-.w-nav-navmenu .nav-list .nav-item {
+.w-nav-navmenu .nav-list-header2 .nav-item {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding-left: 40px;
 }
 @media (max-width: 768px) {
-  .w-nav-navmenu .nav-list .nav-item {
+  .w-nav-navmenu .nav-list-header2 .nav-item {
     display: block;
     border-bottom: 1px solid #333;
     margin: 0 20px;
@@ -242,10 +242,10 @@ header .w-nab-wrapper {
     justify-content: space-between;
   }
 }
-.w-nav-navmenu .nav-list .nav-item::before {
+.w-nav-navmenu .nav-list-header2 .nav-item::before {
   content: unset;
 }
-.w-nav-navmenu .nav-list .nav-item .nav-item-arrow {
+.w-nav-navmenu .nav-list-header2 .nav-item .nav-item-arrow {
   padding-left: 8px;
   position: relative;
 }
@@ -272,7 +272,7 @@ header .w-nab-wrapper {
 }
 .w-nav-navmenu .nav-dropdown-list {
   position: absolute;
-  top: 80px;
+  top: 100px;
   min-width: 200px;
   background-color: white;
   border-radius: 10px;
@@ -304,9 +304,6 @@ header .w-nab-wrapper {
     background-color: unset;
     top: 0;
   }
-}
-.w-nav-navmenu .nav-dropdown-list.nav-dropdown-list3 {
-  top: 70px;
 }
 .w-nav-navmenu .nav-dropdown-list .nav-dropdown-inner {
   padding: 30px;
@@ -368,13 +365,10 @@ header .w-nab-wrapper {
     justify-content: center;
     align-items: center;
     background-color: inherit;
-    position: absolute;
     z-index: 1;
     gap: 30px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    padding: 30px 0;
     width: 100%;
     top: 410px;
   }
