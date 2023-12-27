@@ -2,3 +2,19 @@
 @import "variables";
 @import "header1";
 @import "header2";
+
+// インデックススタイル
+.parts-link{
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    background-color: aquamarine;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 20px;
+    &:hover{
+       opacity: 0.8;
+    }
+}

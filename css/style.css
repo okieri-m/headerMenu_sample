@@ -407,4 +407,19 @@ header .w-nab-wrapper {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
   transition: 0.9s;
+}
+
+.parts-link {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  background-color: aquamarine;
+  width: 80%;
+  margin: auto;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 20px;
+}
+.parts-link:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
