@@ -1,0 +1,142 @@
+<html>
+<head>
+<!-- <title><?php wp_title('｜', true, 'right'); ?></title>
+<meta name="robots" content="index, follow">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no"> -->
+
+<!--ファビコンやブックマークアイコンの指定-->
+<!-- <link rel="SHORTCUT ICON" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png" /> -->
+<!-- <meta name="thumbnail" content="<?php echo get_template_directory_uri(); ?>/metathum.jpg" /> -->
+
+<?php wp_head(); ?>
+<!-- </head> -->
+
+<!-- <body>
+
+<header>
+<h1 class="site_title">
+<a href="<?php echo get_home_url();?>"><?php echo get_bloginfo('name');?></a>
+</h1> -->
+
+<!-- functions.phpで設定したメニューの読み込み -->
+<!-- <nav id="menu-header"> -->
+<!-- <?php wp_nav_menu(
+      array (
+        'theme_location' => 'global'
+      )
+); ?> -->
+<!-- </nav>
+</header>
+<main> -->
+<!-- ここからHTML -->
+<title>Headerサンプルデモ一覧</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="./css/recet.css">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<header class="w-nav">
+  <div class="w-nab-wrapper">
+    <a href="#" class="w-nab-logo-link">
+      <img src="./img/sample-logo.png" alt="">
+    </a>
+    <nav class="w-nav-navmenu">
+      <div class="w-layout-grid nav-list">
+        <div class="nav-item">
+          <div class="nav-dropdown-toggle">
+            <span>分類</span>
+            <div class="nav-item-arrow">
+              <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-navmenu-arrow-svg">
+                <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+          </div>
+          <nav class="nav-dropdown-list">
+            <div class="nav-dropdown-inner">
+              <img src="./img/dropdown-menu-arrow.png" alt="" class="dropdown-menu-img-arrow img-arrow1">
+              <a href="#" class="nav-dropdown-link">ビジネス</a>
+              <a href="#" class="nav-dropdown-link">飲食店</a>
+              <a href="#" class="nav-dropdown-link">教育</a>
+              <a href="#" class="nav-dropdown-link">メディア</a>
+              <a href="#" class="nav-dropdown-link">健康・食事</a>
+              <a href="#" class="nav-dropdown-link">アクティビティ</a>
+            </div>
+          </nav>
+          
+        </div>
+        <a href="#" class="nav-item nav-link">料金</a>
+        <div class="nav-item">
+          <div class="nav-dropdown-toggle">
+            <span>アプリ＆統合</span>
+            <div class="nav-item-arrow">
+              <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-navmenu-arrow-svg">
+                <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <nav class="nav-dropdown-list">
+            <div class="nav-dropdown-inner dropdown-inner2">
+              <img src="./img/dropdown-menu-arrow.png" alt="" class="dropdown-menu-img-arrow img-arrow2">
+              <a href="#" class="nav-dropdown-link">iOS用</a>
+              <a href="#" class="nav-dropdown-link">アンドロイド用</a>
+              <a href="#" class="nav-dropdown-link">Chrom拡張機能</a>
+              <a href="#" class="nav-dropdown-link">Edge用</a>
+              <a href="#" class="nav-dropdown-link">Safari用</a>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-item">
+          <div class="nav-dropdown-toggle">
+            <span>資料</span>
+            <div class="nav-item-arrow">
+              <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-navmenu-arrow-svg">
+                <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <nav class="nav-dropdown-list nav-dropdown-list3">
+            <div class="nav-dropdown-inner dropdown-inner3">
+              <img src="./img/dropdown-menu-arrow.png" alt="" class="dropdown-menu-img-arrow img-arrow3">
+              <a href="#" class="nav-dropdown-link">ブログ記事</a>
+              <a href="#" class="nav-dropdown-link">ライブラリ</a>
+              <a href="#" class="nav-dropdown-link">テンプレート</a>
+              <a href="#" class="nav-dropdown-link">素材</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="w-layout-grid nav-login">
+        <a href="#" class="nav-login-link login-link">Log in</a>
+        <a href="#" class="nav-login-link trial-link">無料でお試し</a>
+      </div>
+    </nav>
+  </div>
+  <div class="header-spmenu-wrapper">
+    <div class="sp-menubtn-text">Menu</div>
+    <div class="header_sp-menubtn"><span></span><span></span></div>
+  </div>
+</header>
+
+<main>
+  <div>
+    <img src="./img/contact-bg.jpg" alt="">
+  </div>
+</main>
+
+<footer>
+<!-- functions.phpで設定したウィジェット（フッター用）の読み込み -->
+<div id="footerwidget">
+</div>
+
+<!-- functions.phpで設定したメニューの読み込み -->
+<nav id="menu-footer">
+</nav>
+
+<!-- <p class="copyright">&copy; 20XX.テストテストテスト </p> -->
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

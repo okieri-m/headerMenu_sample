@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import "variables";
+
+header{
+    height: 80px;
+    padding: 0 60px;
+    background: #FBF6EE;
+    position: relative;
+    z-index: 999;
+    @include tab{
+        padding: 0 20px;
+    }
+    .header_wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+    }
+}
+
+.header_logo{
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include sp{
+        position: fixed;
+        display: block;
+        top: -800px;
+        right: 0;
+        width: 100%;
+        height: inherit;
+        background: #FBF6EE;
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        transition: 0.9s;
+        &.open{
+            top: 80px;
+        }
+    }
+    .nav-item{
+        position: relative;
+        &::before{
+            transform-origin: center top;
+            transform: scale(0, 1);
+            background: #FFB534;
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all 0.3s 0s ease;
+            @include sp{
+                transform: scale(1, 1);
+                content: '';
+            }
+        }
+        &:hover::before{
+            transform-origin: center top;
+            transform: scale(1, 1);
+        }
+        &:not(:last-child){
+            padding: 10px 0;
+            @include sp{
+                padding: 30px 20px;
+            }
+        }
+        a{
+            color: #FFB534;
+            transition: all 0.3s 0s ease;
+            &:hover{
+            font-weight: bold;
+            }
+        }
+    }
+    .nav-contact{
+        background-color: #FFB534;
+        border-radius: 50rem;
+        padding: 15px 30px;
+        transition: all 0.3s 0s ease;
+        a{
+            color: white;
+        }
+        &::before{
+            content: none;
+        }
+        &:hover{
+            background-color: rgba(255, 168, 0, 0.8);
+            font-weight: bold;
+        }
+        @include sp{
+            margin: 30px 20px;
+            text-align: center;
+        }
+    }
+}
+
+// ハンバーガーメニュー
+
+.header_sp-menubtn {
+    display: none;
+	position: fixed;
+	top: 30px;
+	right: 20px;
+	width: 30px;
+	height: 24px;
+	z-index: 12;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+    @include sp {
+        display: block;
+    }
+    span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        border-radius: 10px;
+        -webkit-transition: all 400ms;
+        transition: all 400ms;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 10px;
+        }
+        &:nth-child(3) {
+            top: 20px;
+        }
+    }
+    &.open span:nth-child(1) {
+        background: #333;
+        top: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.header_sp-menubtn.open span:nth-child(2){
+    display: none;
+}
+.header_sp-menubtn.open span:nth-child(3) {
+    top: 6px;
+    background: #333;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: 0.9s;
+}
