@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "variables";
 
-.w-nav{
+.header3-wrapper{
     height: 80px;
     padding: 0 60px;
     background: #F5F8FA;
@@ -10,29 +10,29 @@
         position: fixed;
         width: 100%;
     }
-    .w-nab-wrapper{
+    .header3-container{
         display: flex;
         align-items: center;
         height: inherit;
     }
 }
 
-.w-nab-logo-link{
+.header3-logoLink{
     width: 100px;
     display: block;
     img{
         width: 100%;
     }
 }
-.w-nav-navmenu{
+.header3-w-navmenu{
     display: flex;
     flex: 1;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     @include sp{
         position: fixed;
         display: block;
-        top: 80px;
+        top: -800px;
         right: 0;
         width: 100%;
         height: inherit;
@@ -40,29 +40,35 @@
         box-sizing: border-box;
         z-index: 1;
         transition: 0.9s;
-        opacity: 0;
+        opacity: 1;
         &.open{
-            opacity: 1;
+            top: 80px;
         }
     }
-    .nav-list-header2{
+    .w-navmenu-container{
         display: flex;
         align-items: center;
         @include sp {
             display: block;
             background-color: #F5F8FA;
+            height: 100vh;
         }
-        .nav-item{
+        .w-navmenu-item{
+            &:not(:first-child){
+                padding-left: 40px;
+            }
             display: flex;
             align-items: center;
             cursor: pointer;
-            padding-left: 40px;
             @include sp{
                 display: block;
                 border-bottom: 1px solid #333;
                 margin: 0 20px;
                 padding: 30px 0;
                 justify-content: space-between;
+                &:not(:first-child){
+                    padding-left: 0;
+                }
             }
             &::before{
                 content: unset;
@@ -70,6 +76,21 @@
             .nav-item-arrow{
                 padding-left: 8px;
                 position: relative;
+        }
+    }
+    .sp-trialLink-wrapper{
+        display: none;
+        @include sp{
+            margin: 50px 20px;
+            display: block;
+            padding: 20px 0;
+            text-align: center;
+            border: 1px solid #FFA800;
+            border-radius: 50rem;
+            background-color: #FFA800;
+            a{
+                font-size: 14px;
+            }
         }
     }
     }
@@ -82,115 +103,112 @@
         display: none;
     }
 }
-.nav-dropdown-toggle{
+.nav-dropdown-toggle3{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include sp{
+        &:not(:last-child){
+            width: 50%;
+        }
+        &:last-child{
+            width: 100%;
+        }
+    }
     .header-navmenu-arrow-svg{
         transition: 0.5s all;
     }
-    &.is-active{
-        .header-navmenu-arrow-svg{
+}
+.nav-dropdown-toggle3:hover > .nav-dropdown-list3{
+    opacity: 1;
+    visibility: visible;
+}
+@include pc{
+    .nav-dropdown-toggle3:hover .header-navmenu-arrow-svg{
             transform: rotateX(180deg);
-        }
     }
 }
-.nav-dropdown-list{
+.dropdown-items.open{
+    display: flex;
+}
+.nav-dropdown-list3{
     position: absolute;
-    top: 100px;
-    min-width: 200px;
+    top: 80px;
+    left: 0;
+    width: 100%;
     background-color: white;
-    border-radius: 10px;
     -webkit-transition: all 1s;
       -moz-transition: all 1s;
       -ms-transition: all 1s;
       -o-transition: all 1s;
       transition: all 1s;
       opacity: 0;
+      visibility: hidden;
       @include sp{
         display: none;
         opacity: 1;
-      }
-    &.is-open{
-        opacity: 1;
-        @include sp{
-            display: block;
-        }
-    }
-    @include sp{
+        visibility: visible;
         position: relative;
         width: 100%;
         background-color: unset;
         top: 0;
-    }
-    .nav-dropdown-inner{
+        &.is-open{
+            display: block;
+        }
+      }
+    .dropdown-items{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
         padding: 30px;
+        @include tab{
+            gap: 40px;
+        }
         @include sp{
-            padding: 20px;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 20px 20px;
         }
     }
     a{
-        display: block;
-        color: #333;
-        white-space: nowrap;
-        margin-bottom: 16px;
-        &:last-child{
-            margin-bottom: 0;
-        }
-        &::before{
-            content: '●';
-            color: #2F5DB5;
-            padding-right: 8px;
-        }
-    }
-.dropdown-inner2{
-    a::before{
-            color: #53D0F0;
-    }
-}
-.dropdown-inner3{
-    a::before{
-            color: #25C185;
-    }
-}
-}
-.login-link{
-    margin-right: 16px;
-    @include sp{
-        margin-right: 0;
-        padding: 15px 0;
-        border: 1px solid #333;
-        border-radius: 50rem;
-    }
-}
-.nav-login-link{
-    width: 43%;
-    text-align: center;
-}
-.trial-link{
-    background-color: #FFA800;
-    border-radius: 50rem;
-    padding: 20px 30px;
-    @include sp{
-        padding: 15px 0;
-    }
-}
-}
-.nav-login{
-    @include sp {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: inherit;
-        z-index: 1;
-        gap: 30px;
-        left: 50%;
-        padding: 30px 0;
-        width: 100%;
-        top: 410px;
+        color: #333;
+        white-space: nowrap;
+        @include sp{
+            justify-content: flex-start;
+            &::before{
+                content: '●';
+                color: #FFA800;
+                padding-right: 8px;
+            }
+        }
+        img{
+            position: relative;
+            top: 0;
+            padding-right: 6px;
+        }
+    }
+}
+}
+
+.wnav-link-wrapper{
+    @include sp {
+        display: none;
     }
 }
 
+.wnav-contactLink{
+    background-color: #FFA800;
+    border-radius: 50rem;
+    padding: 20px 30px;
+    text-align: center;
+    @include sp{
+        padding: 15px 0;
+    }
+}
 // ハンバーガーメニュー
 .header-spmenu-wrapper{
     position: relative;

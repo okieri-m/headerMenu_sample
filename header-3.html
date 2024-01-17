@@ -32,39 +32,77 @@
 </header>
 <main> -->
 <!-- ここからHTML -->
+
 <title>Headerサンプルデモ一覧</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="./css/recet.css">
 <link rel="stylesheet" href="./css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 </head>
-<header id="header1">
-  <div class="header_wrapper">
-    <div class="header_logo">
-      <a href="index.html">
-        <img src="./img/sample-logo.png" alt="サンプルロゴ">
-      </a>
-    </div>
-    <nav class="nab">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#">私たちについて</a></li>
-        <li class="nav-item"><a href="#">お知らせ</a></li>
-        <li class="nav-item"><a href="#">サービス内容</a></li>
-        <li class="nav-item"><a href="#">料金</a></li>
-        <li class="nav-item nav-contact"><a href="#">お問い合わせ</a></li>
-      </ul>
+<header class="header3-wrapper">
+  <div class="header3-container">
+    <a href="index.html" class="header3-logoLink">
+      <img src="./img/sample-logo.png" alt="ロゴ">
+    </a>
+    <nav class="header3-w-navmenu">
+      <div class="w-navmenu-container">
+        <a href="#" class="w-navmenu-item">こだわり</a>
+        <div class="w-navmenu-item">
+          <div class="nav-dropdown-toggle3">
+            <span>ビール一覧</span>
+            <div class="nav-item-arrow">
+              <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-navmenu-arrow-svg">
+                <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+          <nav class="nav-dropdown-list nav-dropdown-list3">
+            <div class="dropdown-items">
+              <a href="#" class="nav-dropdown-link"><img src="./img/headerSample-beer1.png" alt="クラフトビール" class="dropdown-menu-img-arrow">クラフトビール</a>
+              <a href="#" class="nav-dropdown-link"><img src="./img/headerSample-beer2.png" alt="プレミアム" class="dropdown-menu-img-arrow">プレミアム</a>
+              <a href="#" class="nav-dropdown-link"><img src="./img/headerSample-beer3.png" alt="フルーティービール" class="dropdown-menu-img-arrow">フルーティービール</a>
+              <a href="#" class="nav-dropdown-link"><img src="./img/headerSample-beer4.png" alt="海外産ビール" class="dropdown-menu-img-arrow">海外産ビール</a>
+            </div>
+          </nav>
+          </div>
+          
+        </div>
+        <a href="#" class="w-navmenu-item">キャンペーン</a>
+        <div class="w-navmenu-item">
+          <div class="nav-dropdown-toggle3">
+            <span>ブログ記事</span>
+            <div class="nav-item-arrow">
+              <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-navmenu-arrow-svg">
+                <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <nav class="nav-dropdown-list nav-dropdown-list3">
+              <div class="dropdown-items">
+                <a href="#" class="nav-dropdown-link"><img src="./img/beer-blog1.png" alt="クラフトビールについて" class="dropdown-menu-img-arrow">クラフトビールについて</a>
+                <a href="#" class="nav-dropdown-link"><img src="./img/beer-blog2.png" alt="ギフトビール" class="dropdown-menu-img-arrow">ギフトビール</a>
+                <a href="#" class="nav-dropdown-link"><img src="./img/beer-blog3.png" alt="おすすめの飲み方" class="dropdown-menu-img-arrow">おすすめの飲み方</a>
+                <a href="#" class="nav-dropdown-link"><img src="./img/beer-blog4.png" alt="フレイバービール" class="dropdown-menu-img-arrow">フレイバービール</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="sp-trialLink-wrapper">
+          <a href="#" class="sp-trialLink">無料でお試し</a>
+        </div>
+      </div>
     </nav>
+    <div class="wnav-link-wrapper">
+      <a href="#" class="wnav-contactLink">無料でお試し</a>
+    </div>
   </div>
-  <div class="header_sp-menubtn"><span></span><span></span><span></span></div>
+  <div class="header-spmenu-wrapper">
+    <div class="sp-menubtn-text">Menu</div>
+    <div class="header_sp-menubtn"><span></span><span></span></div>
+  </div>
 </header>
 <body>
-<div class="nabOpen-bg"></div>
 <div class="fv-wrapper fv-wrapper-one">
   <div class="fv-container">
-    <img src="./img/parts-header-fv.jpg" alt="">
+    <img src="./img/parts-header-01.jpg" alt="ファーストビュー画像">
   </div>
 </div>
 <main>
@@ -76,7 +114,7 @@
       </div>
       <div class="sec1_contents-container flex first-contents">
         <div class="concept-contentsImg_container">
-          <img src="./img/parts-header-01.jpg" alt="画像オルト１">
+          <img src="./img/parts-header-03.jpg" alt="画像オルト１">
         </div>
         <div class="concept-contentsTexts_container">
           <p class="concept-contentsText_desc">ダミーテキスト、親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から</p>
@@ -139,7 +177,7 @@
         </div>
         <div class="recommend_container flex">
           <div class="recommendImg_container">
-            <img src="./img/parts-header-03.jpg" alt="画像オルト">
+            <img src="./img/parts-header-fv.jpg" alt="画像オルト">
           </div>
           <div class="recommendContents-container">
             <h3 class="recommend-contents-title">H3タイトルH3タイトル</h3>
@@ -215,6 +253,6 @@
     <p class="copyright">&copy; 20XX.テストテストテスト </p>
   </div>
 </footer>
-<script src="./js/script.js"></script>
+<script src="./js/script-third.js"></script>
 </body>
 </html>

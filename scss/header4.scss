@@ -1,0 +1,573 @@
+@charset "utf-8";
+@import "variables";
+
+header{
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+    height: 103px;
+    position: fixed;
+    @include sp{
+        height: 70px;
+        display: flex;
+    }
+}
+.header__glovalNav{
+    width: 100%;
+    background-color: unset;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+    @include pc2{
+        padding: 0 20px;
+    }
+    @include sp{
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .header__glovalNav-logo{
+        padding: 10px 0;
+        @include pc{
+            display: block;
+        }
+        display: flex;
+        width: 150px;
+        height: 70px;
+        @include sp{
+            width: 100px;
+            padding: 0;
+            height: auto;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    nav{
+        width: 70%;
+    }
+    ul{
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @include sp{
+            padding-top: 0;
+        }
+        li{
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            @include sp{
+                &:not(:last-child){
+                    display: none;
+                }
+                &.pc-nav-button-second{
+                    display: block;
+                }
+            }
+            &.hamburger-menu{
+                @include pc{
+                    display: none;
+                }
+                position: relative;
+                cursor: pointer;
+                width: 80px;
+                height: 40px;
+                margin-left: 40px;
+                @include sp{
+                    width: 40px;
+                    height: 30px;
+                    margin-left: 10px;
+                }
+                span{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #545454;
+                    transition: transform 0.2s;
+                }
+                .menu_top{
+                    top: 0;
+                    @include sp{
+                        top: 3px;
+                    }
+                }
+                .menu_middle{
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .menu_bottom{
+                    bottom: 0;
+                    @include sp{
+                        bottom: 3px;
+                    }
+                }
+            }
+            a{
+                border: solid 1px #aaaaaa;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            img{
+                width: 50%;
+                height: auto;
+            }
+            .pc-nav-x-link{
+                img{
+                    width: 40%;
+                }
+            }
+        }
+        // 追加デザイン
+.pc-nav-button{
+    width: 160px;
+    @include sp{
+        width: inherit;
+    }
+    a{
+        display: inline-block;
+        font-size: 16px;
+        color: #fff;
+        display: flex;
+        @include sp{
+            font-size: 12px;
+        }
+    }
+    .button-donation{
+        position: relative;
+        margin-right: 15px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 35px;
+        border: solid 2px #f2d137;
+        background-color: #f2d137;
+        margin-right: 45px;
+        padding: 10px 0 10px 30px;
+        &::before{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            background-image: url('../img/project/donation-icon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            left: 15px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .button-contact{
+        position: relative;
+        text-align: center;
+        border-radius: 35px;
+        border: solid 2px #e19ec5;
+        background-color: #e19ec5;
+        padding: 10px 0 10px 30px;
+        @include sp{
+            padding: 10px 10px 10px 30px;
+        }
+        &::before{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            background-image: url('../img/project/mail-icon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: solid 2px #e19ec5;
+            background-color: #e19ec5;
+            left: 15px;
+            width: 28px;
+            height: 18px;
+            @include sp{
+                width: 23px;
+                height: 16px;
+                left: 8px;
+            }
+        }
+    }
+}
+    }
+}
+
+
+.hamburger-menu-cont{
+    @include pc{
+        height: auto;    
+        position: relative;
+        z-index: 50;
+    }
+    height: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+    transition: height 0.3s;
+}
+.hamburger-menu-cont.nav-open {
+    height: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 70px;
+    padding: 25px;
+    background-color: white;
+}
+.hamburger-menu-cont > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 30px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    @include pc2{
+        padding: 0 20px;
+        justify-content: space-around;
+        gap: 0;
+    }
+    @include sp{
+        display: block;
+        text-align: center;
+    }
+    li{
+        width: inherit;
+        font-size: 16px;
+        line-height: 1.3;
+        @include pc2{
+            font-size: 14px;
+        }
+        @include sp{
+            padding: 20px;
+        }
+    }
+}
+
+.hamburger-menu-cont-bottom{
+    @include pc{
+        display: none;
+    }
+    display: block;
+    margin: auto;
+    .button{
+        @include sp{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-right: unset;
+            margin-bottom: 40px;
+        }
+        a{
+            width: 100%;
+            display: inline-block;
+            padding: 11px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .button-donation{
+            position: relative;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 35px;
+            border: solid 2px #f2d137;
+            background-color: #f2d137;
+            margin-bottom: 20px;
+            &::before{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                background-image: url('../img/project/donation-icon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                left: 15px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        .button-contact{
+            position: relative;
+            text-align: center;
+            border-radius: 35px;
+            border: solid 2px #e19ec5;
+            background-color: #e19ec5;
+            &::before{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                background-image: url('../img/project/mail-icon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                border: solid 2px #e19ec5;
+                background-color: #e19ec5;
+                left: 15px;
+                width: 28px;
+                height: 18px;
+            }
+        }
+    }
+    .sns{
+        display: flex;
+        justify-content: center;
+        li{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: #5b5d5b;
+            border-radius: 50%;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.hamburger-menu-cont-bottom .sns li:first-child{
+    background-color: white;
+    border: 1px solid #5d5d5d;
+    img {
+        width: 35%;
+    }
+} 
+.hamburger-menu-cont-bottom .sns li:last-child img {
+    width: 50%;
+}
+
+// インデックススタイル
+.parts-link{
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    background-color: aquamarine;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 20px;
+    &:hover{
+       opacity: 0.8;
+    }
+}
+body{
+    font-size: 1.6rem;
+}
+.sec_container{
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 60px;
+    @include sp{
+        padding: 80px 20px;
+    }
+}
+.secTitle-container{
+    text-align: center;
+    .secTitle_en{
+        font-family: 'Rye', serif;
+        font-size: 2.4rem;
+        letter-spacing: 0.2rem;
+    }
+    .secTitle_jp{
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+}
+.first-contents{
+    margin-top: 50px;
+}
+.sec1_contents-container{
+    gap: 30px;
+    align-items: flex-start;
+    .concept-contentsImg_container{
+        width: 40%;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .concept-contentsTexts_container{
+        width: 50%;
+        @include sp{
+            width: 100%;
+        }
+        .concept-contentsText_desc{
+            font-size: 2.4rem;
+            line-height: 40px;
+        }
+    }
+}
+
+// ポイントセクション
+#sec2{
+    background: rgba(139, 192, 191, 0.50);
+}
+.sec2_contents-container{
+    justify-content: space-between;
+    align-items: stretch;
+    .point-container{
+        width: 30%;
+        border-radius: 10px;
+        background: #F3FFFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 30px 20px;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .point-img-container{
+            width: 30%;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 20px;
+            img{
+                vertical-align: middle;
+            }
+        }
+    }
+    .point-contents-title{
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+// セクション３
+.recommend_container{
+    justify-content: space-between;
+    gap: 20px;
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        @include sp{
+            flex-direction: row;
+        }
+    }
+    .recommendImg_container{
+        width: 40%;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .recommendContents-container{
+        width: 60%;
+        @include sp{
+            width: 100%;
+        }
+        .recommend-contents-title{
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .recommend-contents-desc{
+            line-height: 30px;
+        }
+    }
+}
+
+// セクション４
+#sec4{
+    background: rgba(139, 192, 191, 0.50);
+}
+.secTitle_jp{
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.banner_desc{
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+.contactBtn-container{
+    width: 300px;
+    padding: 16px 0;
+    text-align: center;
+    border-radius: 50px;
+    background: #0FA958;
+    margin: auto;
+    font-size: 2.4rem;
+    &:hover{
+        background-color: rgba(15, 169, 88, .8);
+    }
+}
+
+// 会社概要
+.companyInfo-container{
+    max-width: 700px;
+    margin: auto;
+    @include sp{
+        width: 100%;
+    }
+    .table-tr{
+        display: block;
+        @include sp{
+            display: flex;
+        }
+        th{
+            padding: 20px 0;
+            color: #377472;
+            font-weight: 700;
+            width: 250px;
+            border-bottom: 3px solid #377472;
+            border-radius: 50rem;
+            @include sp{
+                width: 30%;
+                display: flex;
+                border-radius: 0;
+            }
+        }
+        td{
+            padding: 20px 0 20px 40px;
+            width: 450px;
+            border-bottom: 1px solid #333;
+            border-radius: 50rem;
+            @include sp{
+                width: 70%;
+                padding: 20px 0 20px 20px;
+                display: block;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+// フッター
+#footer{
+    background: rgba(139, 192, 191, 0.50);
+    padding: 80px 0 30px;
+    text-align: center;
+    @include sp{
+        padding: 40px 0 30px;
+    }
+}
+.footer-nav-list{
+    justify-content: center;
+}
+.footer_nav-item{
+    padding: 0 20px;
+    @include sp{
+        padding: 10px 20px;
+    }
+    &:not(:last-child){
+        border-right: 1px solid #333;
+    }
+}
+.copyright{
+    margin-top: 30px;
+    font-size: 1.2rem;
+}

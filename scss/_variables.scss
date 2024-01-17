@@ -4,12 +4,18 @@ $dark-green: #2B6990;
 
 
 // レスポンシブブレイクポイント
+$pc2: 1026px;
 $pc: 1024px; 
 $tab: 900px; 
 $sp: 768px;
 $ssp: 393px;
+@mixin pc2 {
+    @media (max-width: ($pc2)) {
+        @content;
+    }
+    }
 @mixin pc {
-    @media (max-width: ($pc)) {
+    @media (min-width: ($sp)) {
         @content;
     }
     }
@@ -28,4 +34,21 @@ $ssp: 393px;
         @content;
     }
     }
+    html { 
+        font-size: 62.5%;
+        color: #333;
+        font-family: "Yu Gothic UI";
+        @include sp{
+            font-size: 50%;
+        }
+     }
 
+     .flex{
+        display: flex;
+        @include sp{
+            display: block;
+        }
+     }
+     p[class*="desc"] {
+        font-size: 16px;
+      }

@@ -32,39 +32,74 @@
 </header>
 <main> -->
 <!-- ここからHTML -->
+
 <title>Headerサンプルデモ一覧</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="./css/recet.css">
-<link rel="stylesheet" href="./css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/header4.css">
 </head>
-<header id="header1">
-  <div class="header_wrapper">
-    <div class="header_logo">
-      <a href="index.html">
-        <img src="./img/sample-logo.png" alt="サンプルロゴ">
-      </a>
+<header>
+  <div class="header__glovalNav">
+    <div class="header__glovalNav-logo">
+      <a href="#"><img src="./img/sample-logo.png" alt="サンプル"></a>
     </div>
-    <nav class="nab">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#">私たちについて</a></li>
-        <li class="nav-item"><a href="#">お知らせ</a></li>
-        <li class="nav-item"><a href="#">サービス内容</a></li>
-        <li class="nav-item"><a href="#">料金</a></li>
-        <li class="nav-item nav-contact"><a href="#">お問い合わせ</a></li>
+
+    <nav>
+      <ul>
+        <li><a href="#" target="blank" class="pc-nav-x-link"><img src="./img/project/logo-black.png" alt="Twitter"></a></li>
+        <li><a href="#" target="_blank"><img src="./img/project/LINE.png" alt="LINE"></a></li>
+        <li class="pc-nav-button"><a class="button-donation" href="#">寄付のお願い</a></li>
+        <li class="pc-nav-button pc-nav-button-second"><a class="button-contact" href="#">お問い合わせ</a></li>
+        <li class="hamburger-menu" id="js-hamburger">
+          <span class="menu_top"></span>
+          <span class="menu_middle"></span>
+          <span class="menu_bottom"></span>
+        </li>
       </ul>
     </nav>
   </div>
-  <div class="header_sp-menubtn"><span></span><span></span><span></span></div>
+
+  <div class="hamburger-menu-cont">
+    <ul>
+      <li><a href="#">テキストホームとは</a></li>
+      <li><a href="#">テキストホーム一覧</a></li>
+      <li><a href="#">ホームでのお仕事</a></li>
+      <li><a href="#">ホームでの生活</a></li>
+      <li><a href="#">協議会について</a></li>
+      <li><a href="#">会員専用ページ</a></li>
+    </ul>
+
+    <div class="hamburger-menu-cont-bottom">
+      <div class="button">
+        <a href="#" class="button-donation">寄付のお願い</a>
+        <a href="#" class="button-contact">お問い合わせ</a>
+      </div>
+
+      <ul class="sns">
+        <li>
+          <a href="#" target="_blank">
+            <img src="./img/project/logo-black.png" alt="X">
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="./img/project/mail-icon.png" alt="mail">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="black-bg" id="js-black-bg"></div>
+
 </header>
 <body>
-<div class="nabOpen-bg"></div>
 <div class="fv-wrapper fv-wrapper-one">
   <div class="fv-container">
-    <img src="./img/parts-header-fv.jpg" alt="">
+    <img src="./img/parts-header-01.jpg" alt="ファーストビュー画像">
   </div>
 </div>
 <main>
@@ -76,7 +111,7 @@
       </div>
       <div class="sec1_contents-container flex first-contents">
         <div class="concept-contentsImg_container">
-          <img src="./img/parts-header-01.jpg" alt="画像オルト１">
+          <img src="./img/parts-header-03.jpg" alt="画像オルト１">
         </div>
         <div class="concept-contentsTexts_container">
           <p class="concept-contentsText_desc">ダミーテキスト、親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から</p>
@@ -139,7 +174,7 @@
         </div>
         <div class="recommend_container flex">
           <div class="recommendImg_container">
-            <img src="./img/parts-header-03.jpg" alt="画像オルト">
+            <img src="./img/parts-header-fv.jpg" alt="画像オルト">
           </div>
           <div class="recommendContents-container">
             <h3 class="recommend-contents-title">H3タイトルH3タイトル</h3>
@@ -215,6 +250,6 @@
     <p class="copyright">&copy; 20XX.テストテストテスト </p>
   </div>
 </footer>
-<script src="./js/script.js"></script>
+<script src="./js/script-fourth.js"></script>
 </body>
 </html>

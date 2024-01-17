@@ -2,6 +2,7 @@
 @import "variables";
 @import "header1";
 @import "header2";
+@import "header3";
 
 // インデックススタイル
 .parts-link{
@@ -17,4 +18,215 @@
     &:hover{
        opacity: 0.8;
     }
+}
+body{
+    font-size: 1.6rem;
+}
+.sec_container{
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 60px;
+    @include sp{
+        padding: 80px 20px;
+    }
+}
+.secTitle-container{
+    text-align: center;
+    .secTitle_en{
+        font-family: 'Rye', serif;
+        font-size: 2.4rem;
+        letter-spacing: 0.2rem;
+    }
+    .secTitle_jp{
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+}
+.first-contents{
+    margin-top: 50px;
+}
+.sec1_contents-container{
+    gap: 30px;
+    align-items: flex-start;
+    .concept-contentsImg_container{
+        width: 40%;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .concept-contentsTexts_container{
+        width: 50%;
+        @include sp{
+            width: 100%;
+        }
+        .concept-contentsText_desc{
+            font-size: 2.4rem;
+            line-height: 40px;
+        }
+    }
+}
+
+// ポイントセクション
+#sec2{
+    background: rgba(139, 192, 191, 0.50);
+}
+.sec2_contents-container{
+    justify-content: space-between;
+    align-items: stretch;
+    .point-container{
+        width: 30%;
+        border-radius: 10px;
+        background: #F3FFFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 30px 20px;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .point-img-container{
+            width: 30%;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 20px;
+            img{
+                vertical-align: middle;
+            }
+        }
+    }
+    .point-contents-title{
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+// セクション３
+.recommend_container{
+    justify-content: space-between;
+    gap: 20px;
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        @include sp{
+            flex-direction: row;
+        }
+    }
+    .recommendImg_container{
+        width: 40%;
+        @include sp{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .recommendContents-container{
+        width: 60%;
+        @include sp{
+            width: 100%;
+        }
+        .recommend-contents-title{
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .recommend-contents-desc{
+            line-height: 30px;
+        }
+    }
+}
+
+// セクション４
+#sec4{
+    background: rgba(139, 192, 191, 0.50);
+}
+.secTitle_jp{
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.banner_desc{
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+.contactBtn-container{
+    width: 300px;
+    padding: 16px 0;
+    text-align: center;
+    border-radius: 50px;
+    background: #0FA958;
+    margin: auto;
+    font-size: 2.4rem;
+    &:hover{
+        background-color: rgba(15, 169, 88, .8);
+    }
+}
+
+// 会社概要
+.companyInfo-container{
+    max-width: 700px;
+    margin: auto;
+    @include sp{
+        width: 100%;
+    }
+    .table-tr{
+        display: block;
+        @include sp{
+            display: flex;
+        }
+        th{
+            padding: 20px 0;
+            color: #377472;
+            font-weight: 700;
+            width: 250px;
+            border-bottom: 3px solid #377472;
+            border-radius: 50rem;
+            @include sp{
+                width: 30%;
+                display: flex;
+                border-radius: 0;
+            }
+        }
+        td{
+            padding: 20px 0 20px 40px;
+            width: 450px;
+            border-bottom: 1px solid #333;
+            border-radius: 50rem;
+            @include sp{
+                width: 70%;
+                padding: 20px 0 20px 20px;
+                display: block;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+// フッター
+#footer{
+    background: rgba(139, 192, 191, 0.50);
+    padding: 80px 0 30px;
+    text-align: center;
+    @include sp{
+        padding: 40px 0 30px;
+    }
+}
+.footer-nav-list{
+    justify-content: center;
+}
+.footer_nav-item{
+    padding: 0 20px;
+    @include sp{
+        padding: 10px 20px;
+    }
+    &:not(:last-child){
+        border-right: 1px solid #333;
+    }
+}
+.copyright{
+    margin-top: 30px;
+    font-size: 1.2rem;
 }
