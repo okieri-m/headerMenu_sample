@@ -14,6 +14,4 @@
 		navLogin.classList.toggle("open");
 	});
 
-
-
 }

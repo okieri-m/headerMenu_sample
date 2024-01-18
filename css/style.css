@@ -137,6 +137,7 @@ header .header_wrapper {
   }
 }
 .nav-list .nav-item a {
+  font-size: 1.6rem;
   color: #1fa958;
   transition: all 0.3s 0s ease;
 }
@@ -333,6 +334,7 @@ p[class*=desc] {
   align-items: center;
   cursor: pointer;
   padding-left: 40px;
+  font-size: 1.6rem;
 }
 @media (max-width: 768px) {
   .w-nav-navmenu .nav-list-header2 .nav-item {
@@ -446,10 +448,12 @@ p[class*=desc] {
   }
 }
 .w-nav-navmenu .nav-login-link {
+  font-size: 1.6rem;
   width: 43%;
   text-align: center;
 }
 .w-nav-navmenu .trial-link {
+  font-size: 1.6rem;
   background-color: #FFA800;
   border-radius: 50rem;
   padding: 20px 30px;
@@ -591,6 +595,7 @@ p[class*=desc] {
   }
 }
 .header3-w-navmenu .w-navmenu-container .w-navmenu-item {
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -753,6 +758,7 @@ p[class*=desc] {
   border-radius: 50rem;
   padding: 20px 30px;
   text-align: center;
+  font-size: 1.6rem;
 }
 @media (max-width: 768px) {
   .wnav-contactLink {
@@ -773,6 +779,7 @@ p[class*=desc] {
     top: -54px;
     right: 50px;
     z-index: 1;
+    font-size: 1.6rem;
   }
 }
 .header-spmenu-wrapper .header_sp-menubtn {
@@ -790,23 +797,60 @@ p[class*=desc] {
   transition: 0.9s;
 }
 
-.parts-link {
-  display: block;
-  text-align: center;
-  padding: 20px 0;
-  background-color: aquamarine;
-  width: 80%;
-  margin: auto;
-  text-decoration: none;
-  color: #333;
-  margin-bottom: 20px;
-}
-.parts-link:hover {
-  opacity: 0.8;
+.header-link-wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
-body {
-  font-size: 1.6rem;
+.header-link-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.header-link-container .pc {
+  max-width: 750px;
+}
+.header-link-container .sp {
+  max-width: 250px;
+}
+.header-link-container .header-link img {
+  width: 100%;
+}
+
+.h1-title {
+  padding: 0.5em;
+  color: #010101;
+  background: #eaf3ff;
+  border-bottom: solid 3px #516ab6;
+}
+
+.parts-header-title {
+  position: relative;
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
+  margin-bottom: 30px;
+}
+.parts-header-title::after {
+  position: absolute;
+  content: "";
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #a8d4ff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.parts-body {
+  padding: 0 60px;
+}
+@media (max-width: 768px) {
+  .parts-body {
+    padding: 0 20px;
+  }
 }
 
 .sec_container {

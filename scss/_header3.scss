@@ -54,6 +54,7 @@
             height: 100vh;
         }
         .w-navmenu-item{
+            font-size: 1.6rem;
             &:not(:first-child){
                 padding-left: 40px;
             }
@@ -205,6 +206,7 @@
     border-radius: 50rem;
     padding: 20px 30px;
     text-align: center;
+    font-size: 1.6rem;
     @include sp{
         padding: 15px 0;
     }
@@ -220,6 +222,7 @@
         top: -54px;
         right: 50px;
         z-index: 1;
+        font-size: 1.6rem;
         }
     }
     .header_sp-menubtn{

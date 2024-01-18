@@ -5,22 +5,56 @@
 @import "header3";
 
 // インデックススタイル
-.parts-link{
-    display: block;
-    text-align: center;
-    padding: 20px 0;
-    background-color: aquamarine;
-    width: 80%;
-    margin: auto;
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 20px;
-    &:hover{
-       opacity: 0.8;
+.header-link-wrapper{
+   max-width: 1000px;
+   margin: 50px auto;
+}
+.header-link-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    .pc{
+        max-width: 750px;
+    }
+    .sp{
+        max-width: 250px;
+    }
+    .header-link{
+        img{
+            width: 100%;
+        }
     }
 }
-body{
-    font-size: 1.6rem;
+.h1-title{
+    padding: 0.5em;
+    color: #010101;
+    background: #eaf3ff;
+    border-bottom: solid 3px #516ab6;
+}
+.parts-header-title {
+    position: relative;
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
+  margin-bottom: 30px;
+    &::after{
+        position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #a8d4ff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    }
+  }
+.parts-body{
+    padding: 0 60px;
+    @include sp{
+        padding: 0 20px;
+    }
 }
 .sec_container{
     max-width: 1000px;
