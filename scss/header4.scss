@@ -156,7 +156,7 @@ header{
             top: 50%;
             transform: translateY(-50%);
             content: "";
-            background-image: url('../img/project/donation-icon.png');
+            background-image: url('../img/project/login-icon.png');
             background-repeat: no-repeat;
             background-size: contain;
             left: 15px;
@@ -227,7 +227,6 @@ header{
     justify-content: end;
     gap: 30px;
     padding: 0 40px;
-    margin-bottom: 50px;
     @include pc2{
         padding: 0 20px;
         justify-content: space-around;
@@ -285,7 +284,7 @@ header{
                 top: 50%;
                 transform: translateY(-50%);
                 content: "";
-                background-image: url('../img/project/donation-icon.png');
+                background-image: url('../img/project/login-icon.png');
                 background-repeat: no-repeat;
                 background-size: contain;
                 left: 15px;
@@ -345,6 +344,29 @@ header{
     width: 50%;
 }
 
+// メインビュースタイル
+.fv-container{
+    height: 500px;
+    width: 100%;
+    @include sp{
+        height: 600px;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        margin-top: 103px;
+        @include sp{
+            margin-top: 70px;
+            height: 100%;
+        }
+    }
+}
+.header4-main{
+    margin-top: 120px;
+    @include sp{
+        margin-top: 70px;
+    }
+}
 // インデックススタイル
 .parts-link{
     display: block;

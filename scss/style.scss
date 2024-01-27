@@ -208,6 +208,7 @@
     }
     .table-tr{
         display: block;
+        font-size: 1.6rem;
         @include sp{
             display: flex;
         }
@@ -253,6 +254,9 @@
 }
 .footer_nav-item{
     padding: 0 20px;
+    a{
+        font-size: 1.6rem;
+    }
     @include sp{
         padding: 10px 20px;
     }

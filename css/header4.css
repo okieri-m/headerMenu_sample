@@ -203,7 +203,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   content: "";
-  background-image: url("../img/project/donation-icon.png");
+  background-image: url("../img/project/login-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   left: 15px;
@@ -277,7 +277,6 @@ header {
   justify-content: end;
   gap: 30px;
   padding: 0 40px;
-  margin-bottom: 50px;
 }
 @media (max-width: 1026px) {
   .hamburger-menu-cont > ul {
@@ -348,7 +347,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   content: "";
-  background-image: url("../img/project/donation-icon.png");
+  background-image: url("../img/project/login-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   left: 15px;
@@ -405,6 +404,36 @@ header {
 
 .hamburger-menu-cont-bottom .sns li:last-child img {
   width: 50%;
+}
+
+.fv-container {
+  height: 500px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .fv-container {
+    height: 600px;
+  }
+}
+.fv-container img {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 103px;
+}
+@media (max-width: 768px) {
+  .fv-container img {
+    margin-top: 70px;
+    height: 100%;
+  }
+}
+
+.header4-main {
+  margin-top: 120px;
+}
+@media (max-width: 768px) {
+  .header4-main {
+    margin-top: 70px;
+  }
 }
 
 .parts-link {
