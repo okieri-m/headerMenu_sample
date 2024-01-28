@@ -83,6 +83,9 @@ header{
             font-size: 1.6rem;
             color: #1fa958;
             transition: all 0.3s 0s ease;
+            @include sp{
+                font-size: 2rem;
+            }
             &:hover{
             font-weight: bold;
             }

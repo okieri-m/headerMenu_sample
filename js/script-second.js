@@ -18,21 +18,26 @@
 		  }
 	});
 
+	const bgScreen = document.querySelector(".nabOpen-bg");
 
-  // header-2 スマホメニューアコーディオン
-  const menuToggle = document.querySelectorAll(".nav-dropdown-toggle");  
-  function acToggle() {
+	open.addEventListener("click", () => {
+		bgScreen.classList.toggle("hamburger-bg-cover");
+	});
 
-    const content = this.nextElementSibling;
-    content.classList.toggle("is-open");
+ // アコーディオン
 
-    const menuToggle = this;
-    menuToggle.classList.toggle('is-active');
+  const accordionTitle = document.querySelectorAll('.nav-dropdown-toggle');
+
+  for (let i = 0; i < accordionTitle.length; i++) {
+    accordionTitle[i].addEventListener("click", function () {
+      for (let j = 0; j < accordionTitle.length; j++) {
+        if (accordionTitle[i] !== accordionTitle[j]) {
+          accordionTitle[j].classList.remove("is-active");
+          accordionTitle[j].nextElementSibling.classList.remove('is-open');
+        }
+      }
+      this.classList.toggle('is-active');
+      this.nextElementSibling.classList.toggle('is-open');
+    });
   }
-
-  for (let i = 0; i < menuToggle.length; i++) { 
-    menuToggle[i].addEventListener("click", acToggle);
-  }
-
-
 }

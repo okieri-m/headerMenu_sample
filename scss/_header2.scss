@@ -9,6 +9,7 @@
         padding: 0 20px;
         position: fixed;
         width: 100%;
+        z-index: 9999;
     }
     .w-nab-wrapper{
         display: flex;
@@ -110,10 +111,12 @@
       opacity: 0;
       @include sp{
         display: none;
+        height: 0;
         opacity: 1;
       }
     &.is-open{
         opacity: 1;
+        height: inherit;
         @include sp{
             display: block;
         }
